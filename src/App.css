@@ -1,0 +1,31 @@
+#root {
+  max-width: 1920px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  border-bottom: solid 3px gray;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.title {
+  font-family: fantasy;
+  color: rgb(244, 105, 179);
+  background-color: whitesmoke;
+  font-size: 64px;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin-bottom: 0.3em;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #1a0925aa);
+}
