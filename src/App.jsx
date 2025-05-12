@@ -13,7 +13,7 @@ function App() {
           <CardActionArea component='a' href='https://github.com/kenttcrane' className='card_account' sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardMedia component='img' src='./images/github_logo.svg' className='logo' />
             <CardContent sx={{ marginTop: 'auto' }}>
-                <Typography variant='h6'>&gt;&gt; Github</Typography>
+                <Typography variant='h6' className='text_account'>&gt;&gt; Github</Typography>
             </CardContent>
           </CardActionArea>
         </Card>
@@ -21,7 +21,7 @@ function App() {
           <CardActionArea component='a' href='https://mstdn.jp/@kenttcrane' className='card_account' sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardMedia component='img' src='./images/mastodon_logo.svg' className='logo' />
             <CardContent sx={{ marginTop: 'auto' }}>
-                <Typography variant='h6'>&gt;&gt; Mastodon</Typography>
+                <Typography variant='h6' className='text_account'>&gt;&gt; Mastodon</Typography>
             </CardContent>
           </CardActionArea>
         </Card>
@@ -29,7 +29,7 @@ function App() {
           <CardActionArea component='a' href='https://note.com/kenttcrane' className='card_account' sx={{ display: 'flex', flexDirection: 'column' }}>
             <CardMedia component='img' src='./images/note_logo.svg' className='logo' />
             <CardContent sx={{ marginTop: 'auto' }}>
-                <Typography variant='h6'>&gt;&gt; note</Typography>
+                <Typography variant='h6' className='text_account'>&gt;&gt; note</Typography>
             </CardContent>
           </CardActionArea>
         </Card>

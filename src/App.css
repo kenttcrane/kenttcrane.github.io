@@ -26,6 +26,10 @@ h2 {
   width: 10em;
 }
 
+.text_account {
+  white-space: nowrap;
+}
+
 .card_made {
   height: 30em;
   width: 60em;
