@@ -21,13 +21,26 @@ h2 {
   margin-bottom: 0.3em;
 }
 
-.card {
+.card_account {
   height: 15em;
   width: 10em;
+}
+
+.card_made {
+  height: 30em;
+  width: 60em;
 }
 
 .logo {
   object-fit: contain;
   padding: 1em;
   box-sizing: border-box;
+}
+
+.ss_made {
+  margin-top: 10px;
+  padding-top: 20px;
+  max-height: 50%;
+  max-width: 90%;
+  border: 1px solid gray;
 }
