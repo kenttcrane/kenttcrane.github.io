@@ -11,7 +11,9 @@ h2 {
 }
 
 .title {
-  font-family: fantasy;
+  font-family: 'Slackside One', system-ui;
+  font-weight: 400;
+  font-style: normal;
   color: rgb(244, 105, 179);
   background-color: whitesmoke;
   font-size: clamp(24px, 10vw, 64px);
