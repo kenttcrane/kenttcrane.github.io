@@ -14,7 +14,8 @@ h2 {
   font-family: fantasy;
   color: rgb(244, 105, 179);
   background-color: whitesmoke;
-  font-size: 64px;
+  font-size: clamp(24px, 10vw, 64px);
+  white-space: nowrap;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   margin-bottom: 0.3em;
