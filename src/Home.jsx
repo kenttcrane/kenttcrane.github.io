@@ -51,7 +51,7 @@ function Home() {
         </CardActionArea>
       </Card>
       <Card className='card_made'>
-        <CardActionArea component='a' href='/ruby' className='card_made' sx={{ display: 'flex', flexDirection: 'column' }}>
+        <CardActionArea component={Link} to='/ruby' className='card_made' sx={{ display: 'flex', flexDirection: 'column' }}>
           <CardMedia component='img' src='./images/ruby.png' className='ss_made' sx={{objectFit: 'contain'}}/>
           <CardContent sx={{ marginTop: 'auto' }}>
               <Typography variant='h6'>ルビィ / Ruby</Typography>
