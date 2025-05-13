@@ -1,7 +1,7 @@
 require "js"
 
 def show_random_quote
-  ruby_img = "./images/ruby.png"
+  ruby_img = "/images/ruby.png"
 
   quotes = [
     {
@@ -44,8 +44,6 @@ def show_random_quote
   output_div = JS.global[:document].getElementById("ruby_output")
   output_div[:innerHTML] = output
 end
-
-show_random_quote
 
 button = JS.global[:document].getElementById "button"
 button.addEventListener "click" do |e|
