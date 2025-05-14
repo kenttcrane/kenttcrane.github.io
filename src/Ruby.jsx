@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import './Ruby.css'
 
 function Ruby() {
   useEffect(() => {
