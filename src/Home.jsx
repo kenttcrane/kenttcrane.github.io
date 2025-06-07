@@ -1,8 +1,27 @@
 import './Home.css'
+import React, {useEffect} from 'react';
 import {Box, Card, CardContent, CardActions, CardMedia, Typography, CardActionArea} from '@mui/material'
 import { Link } from "react-router-dom";
 
 function Home() {
+  useEffect(() => {
+    const FADEIN_ELEM = document.getElementById('fadein');
+    const onScroll = () => {
+      const FADEIN_ELEM_TOP = FADEIN_ELEM.getBoundingClientRect().top;
+      const WINDOW_HEIGHT = window.innerHeight;
+      if (WINDOW_HEIGHT > FADEIN_ELEM_TOP + 20) {
+        FADEIN_ELEM.classList.add('fadein-after');
+      } else {
+        FADEIN_ELEM.classList.remove('fadein-after');
+      }
+    };
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // 初回実行
+
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+    }
+  }, []);
 
   return (
     <>
@@ -35,6 +54,12 @@ function Home() {
           </CardActionArea>
         </Card>
       </Box>
+      
+      <h2>座右の銘</h2>
+      <div id='fadein' className='fadein-before'>
+        <div className='zayuu'>不即不離</div>
+        <p>中学だか高校だかの授業で国語の先生から習った言葉。ほどよい人間関係を築いていきたい。実情は即or離。</p>
+      </div>
 
       <h2>作ったもの</h2>
       <Card className='card_made'>
