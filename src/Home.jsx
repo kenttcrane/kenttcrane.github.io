@@ -85,6 +85,16 @@ function Home() {
           </CardContent>
         </CardActionArea>
       </Card>
+      <Card className='card_made'>
+        <CardActionArea component={Link} to='/shuffle' className='card_made' sx={{ display: 'flex', flexDirection: 'column' }}>
+          <CardMedia component='img' src='./images/shuffle.png' className='ss_made' sx={{objectFit: 'contain'}}/>
+          <CardContent sx={{ marginTop: 'auto' }}>
+              <Typography variant='h6'>認知シャッフル睡眠法用音声再生ページ</Typography>
+              <Typography>寝るときのために作りました。</Typography>
+              <Typography>合成音声聞くと眠たくなりませんか？</Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
     </>
   )
 }
