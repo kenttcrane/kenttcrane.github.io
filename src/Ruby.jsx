@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import './Ruby.css'
+import PageTitle from './components/PageTitle';
+import Layout from './components/Layout';
 
 function Ruby() {
   useEffect(() => {
@@ -15,14 +17,15 @@ function Ruby() {
 
   return (
     <>
-      <div className='title'>kenttcraneのページ</div>
-      <h2>黒澤ルビィ　格言</h2>
-      <div id='ruby_output'>
-        <br />
-        <div><img src='/images/ruby.png' className='ruby_img' /></div>
-        <br />
-      </div>
-      <button id='button'>格言を見る</button>
+      <Layout>
+        <h2>黒澤ルビィ　格言</h2>
+        <div id='ruby_output'>
+          <br />
+          <div><img src='/images/ruby.png' className='ruby_img' /></div>
+          <br />
+        </div>
+        <button id='button'>格言を見る</button>
+      </Layout>
     </>
   )
 }

@@ -1,4 +1,6 @@
 import { useRef, useState } from "react";
+import PageTitle from "./components/PageTitle";
+import Layout from "./components/Layout";
 
 function Shuffle() {
     const minutesRef = useRef();
@@ -46,12 +48,13 @@ function Shuffle() {
 
     return (
         <>
-        <div className='title'>kenttcraneのページ</div>
-        <h2>認知シャッフル睡眠法用音声再生ページ</h2>
-        <div id='shuffle_output'>
-            <p>時間: <input id="minutes" type="number" defaultValue={15} ref={minutesRef} />分</p>
-        </div>
-        <button id='button' onClick={handleClick} disabled={isRunning}>再生</button>
+        <Layout>
+            <h2>認知シャッフル睡眠法用音声再生ページ</h2>
+            <div id='shuffle_output'>
+                <p>時間: <input id="minutes" type="number" defaultValue={15} ref={minutesRef} />分</p>
+            </div>
+            <button id='button' onClick={handleClick} disabled={isRunning}>再生</button>
+        </Layout>
         </>
     );
 }
