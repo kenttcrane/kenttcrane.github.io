@@ -1,13 +1,24 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import PageTitle from "./components/PageTitle";
 import Layout from "./components/Layout";
 
 function Shuffle() {
     const minutesRef = useRef();
     const [isRunning, setIsRunning] = useState(false);
+    const intervalRef = useRef(null);
+
+    useEffect(() => {
+        // アンマウント時に音声とタイマーを停止
+        return () => {
+            window.speechSynthesis.cancel();
+            if (intervalRef.current) {
+                clearInterval(intervalRef.current);
+            }
+        };
+    }, []);
 
     const handleClick = async () => {
-         if (isRunning) return; // 既に再生中なら何もしない
+        if (isRunning) return; // 既に再生中なら何もしない
         setIsRunning(true);
         const minutes = parseInt(minutesRef.current.value, 10);
         const totalMs = minutes * 60 * 1000;
@@ -20,10 +31,10 @@ function Shuffle() {
         // random_words.jsonを取得
         const res = await fetch("/random_words.json");
         const words = await res.json();
-        
-        const intervalId = setInterval(() => {
+
+        intervalRef.current = setInterval(() => {
             if (Date.now() - start >= totalMs) {
-                clearInterval(intervalId);
+                clearInterval(intervalRef.current);
                 setIsRunning(false);
                 alert("再生が終了しました。");
                 return;
@@ -40,11 +51,11 @@ function Shuffle() {
             if (googleJpVoice) {
                 utter.voice = googleJpVoice;
             }
-                
+
             window.speechSynthesis.cancel();
             window.speechSynthesis.speak(utter);
         }, 4000);
-    }
+    };
 
     return (
         <>
