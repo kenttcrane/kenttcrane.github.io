@@ -5,8 +5,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
-    "build": "vite build",
+    "dev": "npx tailwindcss build -i ./public/css/tailwind.css -o ./src/components/GirigiriMain.css && vite --host",
+    "build": "npx tailwindcss build -i ./public/css/tailwind.css -o ./src/components/GirigiriMain.css && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
