@@ -1,11 +1,10 @@
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "LINE Seed JP", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: #1a1a1a;
-  background-color: #e7c7db;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,6 +18,8 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background: linear-gradient(75deg, #e97ec0, #dedc71, #f8b3fd);
+  background-attachment: fixed;
 }
 
 #root {
