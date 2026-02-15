@@ -96,6 +96,15 @@ function Home() {
             </CardContent>
           </CardActionArea>
         </Card>
+        <Card className='card_made'>
+          <CardActionArea component={Link} to='/roulette' className='card_made' sx={{ display: 'flex', flexDirection: 'column' }}>
+            <CardMedia component='img' src='./images/roulette.png' className='ss_made' sx={{objectFit: 'contain'}}/>
+            <CardContent sx={{ marginTop: 'auto' }}>
+                <Typography variant='h6'>ルーレット</Typography>
+                <Typography>ランダムに選ばれる要素を楽しむためのルーレットです。</Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       </Layout>
     </>
   )
